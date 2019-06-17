@@ -15,31 +15,10 @@ public class App
       System.out.println("Write the text :");
       String text =  in.nextLine();
 
-      List<Language> languages = translate.listSupportedLanguages();
-      boolean valid = True;
-
-      while(valid)
-      {
-        trans.showChoices();
-        String code = in.nextLine();
-
-        for (Language language : languages) {
-          
-          if ((language.getCode()).equals(code) ) {
-            valid=False;
-            
-          }
-        }
-
-      }
-
-
+      //trans.showChoices();
+      //String code = in.nextLine();
+      String code = "";
+      code = valid(code);
       trans.printTranslation(text, code);
     }
 }
-
-
-
-      System.out.println("Choose 1 code of a language");
-      for (Language language : languages) {
-        System.out.printf("Name: %s, Code: %s\n", language.getName(), language.getCode());

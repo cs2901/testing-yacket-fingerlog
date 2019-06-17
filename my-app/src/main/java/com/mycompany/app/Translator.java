@@ -6,7 +6,8 @@ import com.google.cloud.translate.Translate.TranslateOption;
 import com.google.cloud.translate.TranslateOptions;
 import com.google.cloud.translate.Translation;
 import com.google.cloud.translate.Language;
-import java.util.List;
+//import java.util.List;
+import java.util.*;
 
 public class Translator
 {
@@ -45,5 +46,26 @@ public class Translator
             TranslateOption.targetLanguage(lang));
         System.out.println(translation.getTranslatedText());
     }
+
+    public String valid(String code)
+    {
+      boolean valid = True;
+
+      while(valid)
+      {
+        trans.showChoices();
+        String code = in.nextLine();
+
+        for (Language language : languages) {
+          
+          if ((language.getCode()).equals(code) ) {
+            valid=False;
+            
+          }
+        }
+
+      }
+      return code;
+    } 
 
 }
