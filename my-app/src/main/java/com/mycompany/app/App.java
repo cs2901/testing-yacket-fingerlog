@@ -18,7 +18,7 @@ public class App
       //trans.showChoices();
       //String code = in.nextLine();
       String code = "";
-      code = valid(code);
+      code = trans.valid(code);
       trans.printTranslation(text, code);
     }
 }
